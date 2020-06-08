@@ -48,12 +48,13 @@ south_slavic = {
 		
 	}
 	culture = {
-		high_yugoslav = {}
+		vukojebinac = {}
+		high_vukojebinac = {}
 		serbian = {}
 		croatian = {}
 		bulgarian = {}
 		carinthian = {}
-		francuska = {}
+		galski = {}
 		rimska = {}
 		keltska = {}
 		nemachka = {}
@@ -64,7 +65,7 @@ south_slavic = {
 	}
 	
 	barbarian_names = { 
-		USTASHI NEMACHKI MADJARI TURCI AUSTRIJANCI ITALIJANI ALBANCI
+		USTASHE NEMACHKI MADJARI TURCI AUSTRIJANCI ITALIJANI ALBANCI
 	}
 	
 	
