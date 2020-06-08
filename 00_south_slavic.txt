@@ -1,0 +1,76 @@
+south_slavic = {
+	
+	color = hsv { 0.62 0.60 0.41}
+
+	male_names = {
+		 Aleksandar Andrej Avram Boris Bozhidar Damjan Danilo Dimitrije Djordje Filip Gavrilo Grgur Igor Ilija Jakov Jovan Kosta Kristijan Lazar Luka Marko Matija Mihailo Nikola Pavle
+		 Petar Sava Sergej Stefan Boban Bogdan Bojan Borjan Damjan Dejan Dragan Dushan Radovan Sezhan Slobodan Srdjan Stojan Vladan Vuksan Zlatan Zoran Zhivan Zvezdan Berislav Borislav
+		 Branislav Dragoslav Jugoslav Miroslav Radoslav Stanislav Svetislav Tomislav Visheslav Vladislav Vojislav Zdeslav Branimir Budimir Chedomir Desimir Dragomir Jezdimir Ljubomir
+		 Milomir Momir Predimir Ratimir Sretomir Tihomir Velimir Vladimir Blagoje Borivoje Dobrivoje Ljubivoje Milivoje Radivoje Radoje Spasoje Sredoje Vidoje Cvijetin Dragutin Miladin
+		 Kostadin Milutin Veletin Vujadin Vukashin Zhivojin Boshko Branko Cvetko Danko Darko Drashko Djoko Janko Marinko Matko Milanko Milenko Mirko Nedeljko Ratko Rastko Rashko Slavko
+		 Vasko Veljko Vlatko Zdravko Zvonko Zheljko Zhivko Bogoljub Dragoljub Drazhen Djura Ljuba Ljubisha Mika Mikica Miloje Milorad Milosh Miodrag Misha Mitar Mladen Nebojsha Nemanja
+		 Nenad Novak Niksha Obrad Predrag Radich Rodoljub Svetozar Strahinja Urosh Velibor Vlado Vuk Zhivota
+
+	}
+	female_names = {
+		 Adrijana Aleksandra Ana Andreja Andrijana Andjela Dajana Danijela Jasmina Jelena Katarina Kristina Ksenija Magdalena Marija Marina Natalija Natasha Sandra Sonja Tamara Suzana
+		 Tanja Tatjana Tijana Teodora Anica Blagica Dobrica Danica Djurica Ljubica Marica Milica Slavica Verica Vujica Biljana Bobana Bogdana Bojana Dragana Gordana Ivana Jovana Ljiljana
+		 Milana Mirjana Sladjana Smiljana Snezhana Svetlana Vladana Zorana Anka Bosiljka Basiljka Borka Danka Darinka Desanka Dubravka Dushanka Dushka Ivanka Jadranka Jovanka Ljubinka
+		 Milanka Radojka Slavka Stojanka Varadinka Veselinka Vlatka Draginja Jasna Milena Mina Nada Nevena Radmila Sanja Vesna Vida
+		   
+	}
+
+	nickname = {
+		NICKNAME_VOJVODA
+		NICKNAME_EUERGETES
+		NICKNAME_EUPATOR
+		NICKNAME_EUSEBES
+		NICKNAME_KALLINIKOS
+		NICKNAME_NEOS_DIONYSOS
+		NICKNAME_NIKATOR
+		NICKNAME_PHILADELPHOS
+		NICKNAME_PHILOMETOR
+		NICKNAME_PHILOPATOR
+		NICKNAME_SOTER
+		NICKNAME_THEOS
+		NICKNAME_POLIORCETES
+		NICKNAME_DOSON
+		NICKNAME_GONATAS
+		NICKNAME_KALOS
+		NICKNAME_MEGAS
+	}
+	
+	family = {
+		Blagojevic Bojanic Bradaric Bregovic Brozovic Crnchevic Crvelin Dmitrovic Dragic Dzheko Gambasom Grujic Handanovic Ivanovic Janjoshevic Janjoshic Janjushevic Janjushic
+		Jovanovic Jovic Kalinic Kachaniklic Kostic Kovachic Kramaric Krstajic Livakovic Ljajic Mandzhukic Matasovic Matic Medenjak Milenkovic Milovojevic Milic Milosh Miloshevic Mitrovic
+		Modric Ogrinec Panic Perishic Pilar Pivaric Pjanic Prijovic Radonjic Rakitic Rebic Rimac Rodic Savic Spajic Stojkovic Strinic Tadic Tankovic Tesla Toshic Ugren Ugrenovic Ungar Madjar
+		Madjaric Veljkovic Vlashic Vogrin Vrsaljko Vugec Vugrinec Vujic Zebec Djurdjic Shamija Shtambuk Zhivkovic Bosanac Horvat Ibrahimovic Kozarac
+		
+	}
+	culture = {
+		high_yugoslav = {}
+		serbian = {}
+		croatian = {}
+		bulgarian = {}
+		carinthian = {}
+		francuska = {}
+		rimska = {}
+		keltska = {}
+		nemachka = {}
+		shpanska = {}
+		italijanska = {}
+		kartaginska = {}
+		grchka = {}
+	}
+	
+	barbarian_names = { 
+		USTASHI NEMACHKI MADJARI TURCI AUSTRIJANCI ITALIJANI ALBANCI
+	}
+	
+	
+	
+	graphical_culture = greek_gfx
+	ethnicities = {
+		10 = greek 
+	}
+}
