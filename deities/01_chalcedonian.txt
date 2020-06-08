@@ -1,24 +1,17 @@
 ﻿### General Deity Checks ###
-deity_deborah = {
+deity_saint_peter = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
-	icon = deity_war
-	passive_modifier = { experience_decay = deity_experience_decay_svalue }
-	omen = { land_morale_modifier = omen_land_morale_modifier_svalue } #Bonus from Omen
-	religion = judaism
-	deity_category = war #This Deity uses a War slot.
-	
+	icon = deity_eloquence
+	passive_modifier = { global_pop_conversion_speed_modifier = deity_global_pop_conversion_speed_modifier_svalue }
+	omen = { global_freemen_happyness = omen_global_freemen_happiness_svalue } #Bonus from Omen
+	religion = chalcedonian
+	deity_category = culture #This Deity uses a Culture Slot
 	on_activate = {
-		if = {
-			limit = { manpower_percentage < 0.8 }
-			add_manpower = 1.5
-		}
-		else = {
-			add_military_experience = 2
-		}
+		add_stability = 10
 	}
-	
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
@@ -26,17 +19,17 @@ deity_deborah = {
 
 deity_caleb_joshua = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
 	icon = deity_wealth
 	passive_modifier = { global_capital_trade_routes = deity_global_capital_trade_routes_svalue }
 	omen = { monthly_tyranny = omen_monthly_tyranny_svalue } #Bonus from Omen
-	religion = judaism
+	religion = chalcedonian
 	deity_category = economy #This Deity uses an Economy Slot
 	
 	on_activate = {
 		capital_scope = {
-			create_2_citizens_effect = yes
+			create_2_citizen_effect = yes
 		}
 	}
 
@@ -128,21 +121,6 @@ deity_abraham = {
 	}
 }
 
-deity_children_of_god = { #Not used
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_war
-	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
-	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
-	religion = judaism
-	deity_category = war #This Deity uses a War slot.
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
 deity_david = {
 	trigger = {
 		religion = judaism
@@ -163,9 +141,9 @@ deity_david = {
 	}
 }
 
-deity_solomon = {
+deity_saint_sava = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
 	icon = deity_eloquence
 	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
@@ -173,12 +151,9 @@ deity_solomon = {
 	religion = judaism
 	deity_category = culture #This Deity uses a Culture Slot
 	on_activate = {
-		p:687 = { 
-			add_permanent_province_modifier = {
-				name = "second_temple_embelishment"
-				duration = -1
-				mode = add
-			}
+		add_research = {
+			technology = civic_tech
+			value = 10
 		}
 	}
 
@@ -189,12 +164,12 @@ deity_solomon = {
 
 deity_moses = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
 	icon = deity_war
 	passive_modifier = { global_start_experience = deity_global_start_experience_svalue }
 	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
-	religion = judaism
+	religion = chalcedonian
 	deity_category = war #This Deity uses a War slot.
 	on_activate = {
 		add_1_free_province_investments = yes
@@ -205,7 +180,7 @@ deity_moses = {
 	}
 }
 
-deity_joseph = {
+deity_saint_basil_of_ostrog = {
 	trigger = {
 		religion = judaism
 	}
@@ -218,7 +193,7 @@ deity_joseph = {
 		capital_scope = {
 			state = {
 				add_state_modifier = {
-					name = province_improvement_baal_harvest
+					name = church_distributes_food
 					duration = 1825
 				}
 			}
@@ -230,68 +205,17 @@ deity_joseph = {
 	}
 }
 
-deity_esther = {
+deity_donatus_of_zadar = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
 	icon = deity_love
 	passive_modifier = { global_pop_conversion_speed_modifier = deity_global_pop_conversion_speed_modifier_svalue }
 	omen = { happiness_for_wrong_culture_group_modifier = omen_happiness_for_wrong_culture_group_modifier_svalue } #Bonus from Omen
-	religion = judaism
+	religion = chalcedonian
 	deity_category = fertility #This Deity uses a Culture Slot
 	on_activate = {
-		if = {
-			limit = {
-				exists = scope:deified_ruler
-				any_owned_province = {
-					any_pops_in_province = {
-						NOT = {
-							pop_culture = scope:deified_ruler.culture
-						}
-					}
-				}
-			}
-			custom_tooltip = assimilate_pops_omen
-		}
-		hidden_effect = {
-			while = {
-				count = 5
-				limit = {
-					exists = scope:deified_ruler
-					any_owned_province = {
-						any_pops_in_province = {
-							NOT = {
-								pop_culture = scope:deified_ruler.culture 
-							}
-						}
-					}
-				}
-				random_owned_province = {
-					limit = {
-						any_pops_in_province = {
-							NOT = {
-								pop_culture = scope:deified_ruler.culture 
-							}
-						}
-					}
-					random_pops_in_province = {
-						limit = {
-							NOT = {
-								pop_culture = scope:deified_ruler.culture 
-							}
-						}
-						set_pop_culture = scope:deified_ruler.culture
-					}
-				}
-			}
-		}
-	}
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
+		
 deity_daniel = {
 	trigger = {
 		religion = judaism
@@ -302,53 +226,16 @@ deity_daniel = {
 	religion = judaism
 	deity_category = economy #This Deity uses a Culture Slot
 	on_activate = {
-		if = {
-			limit = {
-				exists = scope:deified_ruler
-				any_character = {
-					has_any_position = yes
-					NOT = { has_religion = scope:deified_ruler.religion }
-				}
-			}
-			custom_tooltip = converts_one_employed_character
-		}
-		else_if = {
-			custom_tooltip = no_converts
-		}
-		hidden_effect = {
-			while = {
-				count = 2
-				limit = {
-					exists = scope:deified_ruler
-					any_character = {
-						has_any_position = yes
-						NOT = { has_religion = scope:deified_ruler.religion }
-					}
-				}
-				random_character = {
-					limit = {
-						has_any_position = yes
-						NOT = { has_religion = scope:deified_ruler.religion }
-					}
-					set_character_religion = scope:deified_ruler.religion
-				}
-			}
-		}
-	}
 
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
 
-deity_ezekiel = {
+deity_saint_lazar_hrebeljanovic = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
 	icon = deity_war
 	passive_modifier = { cohort_reinforcement_speed = deity_cohort_reinforcement_speed_svalue }
 	omen = { global_defensive = omen_global_defensive_svalue } #Bonus from Omen
-	religion = judaism
+	religion = chalcedonian
 	deity_category = war #This Deity uses a Culture Slot
 	on_activate = {
 		capital_scope = {
@@ -366,14 +253,14 @@ deity_ezekiel = {
 	}
 }
 
-deity_ezra = {
+deity_saint_basil_of_ostrog = {
 	trigger = {
-		religion = judaism
+		religion = chalcedonian
 	}
 	icon = deity_eloquence
 	passive_modifier = { global_monthly_state_loyalty = deity_global_monthly_state_loyalty_svalue }
 	omen = { global_slaves_happyness = omen_global_slaves_happiness_svalue } #Bonus from Omen
-	religion = judaism
+	religion = chalcedonian
 	deity_category = culture #This Deity uses a Culture Slot
 	on_activate = {
 		add_stability = 10
