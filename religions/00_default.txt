@@ -121,3 +121,12 @@ jainism = { # Jain
 	sacrifice_icon = sacrifice_incense
 	sacrifice_sound = "event:/SFX/UI/Religion/sfx_ui_religion_generic_sacrifice"
 }
+
+chalcedonian = { # Chalcedonian
+	color = hsv { 0.5 0.5 1.0 }
+	global_freemen_happiness = 1
+	global_pop_conversion_speed_modifier = 2
+	religion_category = prophets
+	can_deify_ruler = no
+	sacrifice_icon = sacrifice_incense
+	sacrifice_sound = "event:/SFX/UI/Religion/sfx_ui_religion_generic_sacrifice"
