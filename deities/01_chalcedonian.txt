@@ -17,7 +17,8 @@ deity_saint_peter = {
 	}
 }
 
-deity_caleb_joshua = {
+
+deity_saints_cyril_and_methodius = {
 	trigger = {
 		religion = chalcedonian
 	}
@@ -26,30 +27,26 @@ deity_caleb_joshua = {
 	omen = { monthly_tyranny = omen_monthly_tyranny_svalue } #Bonus from Omen
 	religion = chalcedonian
 	deity_category = economy #This Deity uses an Economy Slot
-	
-	on_activate = {
-		capital_scope = {
-			create_2_citizen_effect = yes
-		}
-	}
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_samuel = {
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_eloquence
-	passive_modifier = { agressive_expansion_monthly_change = deity_aggressive_expansion_monthly_change_svalue }
-	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
-	religion = judaism
-	deity_category = culture #This Deity uses a Culture Slot'
 	on_activate = {
 		add_research = {
 			technology = religious_tech
+			value = 10
+		}
+	}
+
+
+deity_saint_ignatius_of_loyola = {
+	trigger = {
+		religion = chalcedonian
+	}
+	icon = deity_war
+	passive_modifier = { agressive_expansion_monthly_change = deity_aggressive_expansion_monthly_change_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
+	religion = chalcedonian
+	deity_category = culture #This Deity uses a War Slot'
+	on_activate = {
+		add_research = {
+			technology = military_tech
 			value = 10
 		}
 	}
@@ -58,6 +55,7 @@ deity_samuel = {
 		can_deify_trigger = yes
 	}
 }
+
 
 deity_abraham = {
 	trigger = {
@@ -69,57 +67,11 @@ deity_abraham = {
 	religion = judaism
 	deity_category = fertility #This Deity uses a Fertility Slot
 	on_activate = {
-		if = {
-			limit = {
-				exists = scope:deified_ruler
-				any_owned_province = {
-					any_pops_in_province = {
-						NOT = {
-							pop_religion = scope:deified_ruler.religion 
-						}
-					}
-				}
-			}
-			custom_tooltip = convert_pops_omen
-		}
-		hidden_effect = {
-			while = {
-				count = 5
-				limit = {
-					exists = scope:deified_ruler
-					any_owned_province = {
-						any_pops_in_province = {
-							NOT = {
-								pop_religion = scope:deified_ruler.religion 
-							}
-						}
-					}
-				}
-				random_owned_province = {
-					limit = {
-						any_pops_in_province = {
-							NOT = {
-								pop_religion = scope:deified_ruler.religion 
-							}
-						}
-					}
-					random_pops_in_province = {
-						limit = {
-							NOT = {
-								pop_religion = scope:deified_ruler.religion 
-							}
-						}
-						set_pop_religion = scope:deified_ruler.religion
-					}
-				}
-			}
+			capital_scope = {
+			create_2_freemen_effect = yes
 		}
 	}
-	
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
+
 
 deity_david = {
 	trigger = {
@@ -140,6 +92,7 @@ deity_david = {
 		can_deify_trigger = yes
 	}
 }
+
 
 deity_saint_sava = {
 	trigger = {
@@ -162,6 +115,7 @@ deity_saint_sava = {
 	}
 }
 
+
 deity_moses = {
 	trigger = {
 		religion = chalcedonian
@@ -179,6 +133,7 @@ deity_moses = {
 		can_deify_trigger = yes
 	}
 }
+
 
 deity_saint_basil_of_ostrog = {
 	trigger = {
@@ -205,6 +160,7 @@ deity_saint_basil_of_ostrog = {
 	}
 }
 
+
 deity_donatus_of_zadar = {
 	trigger = {
 		religion = chalcedonian
@@ -215,8 +171,13 @@ deity_donatus_of_zadar = {
 	religion = chalcedonian
 	deity_category = fertility #This Deity uses a Culture Slot
 	on_activate = {
-		
-deity_daniel = {
+		capital_scope = {
+			create_2_freemen_effect = yes
+		}
+	}
+	
+	
+deity_king_solomon = {
 	trigger = {
 		religion = judaism
 	}
@@ -226,6 +187,10 @@ deity_daniel = {
 	religion = judaism
 	deity_category = economy #This Deity uses a Culture Slot
 	on_activate = {
+		capital_scope = {
+			create_2_freemen_effect = yes
+		}
+	}
 
 
 deity_saint_lazar_hrebeljanovic = {
@@ -252,6 +217,7 @@ deity_saint_lazar_hrebeljanovic = {
 		can_deify_trigger = yes
 	}
 }
+
 
 deity_saint_basil_of_ostrog = {
 	trigger = {
