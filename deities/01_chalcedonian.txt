@@ -99,8 +99,8 @@ deity_saint_sava = {
 		religion = chalcedonian
 	}
 	icon = deity_eloquence
-	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
-	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
+	passive_modifier = { global_pop_conversion_speed_modifier = deity_global_pop_conversion_speed_modifier_svalue }
+	omen = { happiness_for_wrong_culture_group_modifier = omen_happiness_for_wrong_culture_group_modifier_svalue } #Bonus from Omen
 	religion = judaism
 	deity_category = culture #This Deity uses a Culture Slot
 	on_activate = {
@@ -166,8 +166,8 @@ deity_donatus_of_zadar = {
 		religion = chalcedonian
 	}
 	icon = deity_love
-	passive_modifier = { global_pop_conversion_speed_modifier = deity_global_pop_conversion_speed_modifier_svalue }
-	omen = { happiness_for_wrong_culture_group_modifier = omen_happiness_for_wrong_culture_group_modifier_svalue } #Bonus from Omen
+	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
+	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
 	religion = chalcedonian
 	deity_category = fertility #This Deity uses a Culture Slot
 	on_activate = {
